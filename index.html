@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Chat Pulse - YouTube Live Stream Moderator</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	<link rel="manifest" href="assets/site.webmanifest">	
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0066cc;
+            --primary-green: #28a745;
+        }
+        .navbar-custom {
+            background-color: var(--primary-blue);
+        }
+        .btn-custom {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #218838;
+            border-color: #218838;
+            color: white;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            color: white;
+            padding: 4rem 0;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+        .disclaimer-alert {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+		span.blockspam {
+		  display: none;
+		}		
+    </style>
+</head>
+<body>
+    <!-- Navigation remains the same -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#home">YT Chat Pulse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#privacy">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#terms">Terms of Service</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section with added disclaimer -->
+    <section id="home">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container text-center">
+				<img src="assets/logo.png" alt="Chat Pulse Logo" class="logo-img">
+                <h1 class="display-4">Enhance Your YouTube Live Streams</h1>
+                <p class="lead">Automated moderation and engagement tools for YouTube live streamers</p>
+                <button class="btn btn-light btn-lg mt-3">Get Started</button>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="disclaimer-alert">
+                <strong>Important Notice:</strong> By using YT Chat Pulse, you acknowledge and accept full responsibility for all actions performed by the application on your behalf, including any automated comments or moderation actions.
+            </div>
+        </div>
+
+        <!-- Features Section remains the same -->
+        <div class="container my-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon mb-3">📢</div>
+                        <h3>Automated Comments</h3>
+                        <p>Share channel details and welcome messages automatically in your live streams</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon mb-3">📊</div>
+                        <h3>Google Sheets Integration</h3>
+                        <p>Easily manage your channel information using Google Sheets</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon mb-3">🔒</div>
+                        <h3>Secure Access</h3>
+                        <p>Safe and secure authentication using Google OAuth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy with enhanced disclaimers -->
+    <section id="privacy" class="container my-5">
+        <h2>Privacy Policy</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5>Last updated: January 14, 2025</h5>
+                
+                <div class="disclaimer-alert">
+                    <strong>Disclaimer:</strong> YT Chat Pulse is provided as-is without any warranties or guarantees. Users are solely responsible for all actions and consequences resulting from the use of this service.
+                </div>
+
+                <h4 class="mt-4">1. Information We Collect</h4>
+                <p>YT Chat Pulse collects only the minimum necessary information to provide our service:</p>
+                <ul>
+                    <li>YouTube channel ID</li>
+                    <li>Channel name and description</li>
+                    <li>OAuth tokens (stored for their maximum validity period)</li>
+                </ul>
+
+                <h4 class="mt-4">2. How We Use Your Information</h4>
+                <p>We use the collected information solely for:</p>
+                <ul>
+                    <li>Authenticating with YouTube's API</li>
+                    <li>Posting automated comments in live streams</li>
+                    <li>Reading channel-related data from Google Sheets</li>
+                </ul>
+
+                <h4 class="mt-4">3. Data Storage</h4>
+                <p>We store only essential data required for the application to function. OAuth tokens are stored securely and only for their valid duration.</p>
+
+                <h4 class="mt-4">4. Third-Party Services</h4>
+                <p>We integrate with the following third-party services:</p>
+                <ul>
+                    <li>YouTube API Services</li>
+                    <li>Google Sheets API</li>
+                </ul>
+
+                <h4 class="mt-4">5. Liability</h4>
+                <p>YT Chat Pulse and its creators assume no responsibility or liability for:</p>
+                <ul>
+                    <li>Content of automated comments posted through the service</li>
+                    <li>Any actions taken by the application on behalf of users</li>
+                    <li>Any consequences resulting from the use of this service</li>
+                    <li>Any damages or losses incurred through the use of this service</li>
+                </ul>
+
+                <h4 class="mt-4">6. Contact</h4>
+                <p>For any privacy-related questions or concerns, please contact us at <span class="blockspam" aria-hidden="true">PLEASE GO AWAY!</span> ytcp@<!-- zdfjzdhfkjypcz -->bishan.me.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms of Service with enhanced disclaimers -->
+    <section id="terms" class="container my-5">
+        <h2>Terms of Service</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5>Last updated: January 14, 2025</h5>
+
+                <div class="disclaimer-alert">
+                    <strong>Important Legal Notice:</strong> By using YT Chat Pulse, you explicitly agree that you are solely responsible for all actions performed by the application, including but not limited to automated comments, welcome messages, and any other interactions with YouTube's platform.
+                </div>
+
+                <h4 class="mt-4">1. Acceptance of Terms</h4>
+                <p>By accessing and using YT Chat Pulse, you agree to be bound by these Terms of Service and accept full responsibility for all consequences of using the service.</p>
+
+                <h4 class="mt-4">2. Service Description</h4>
+                <p>YT Chat Pulse is a free service that provides automated moderation and commenting features for YouTube live streams. The service is provided "as is" without any warranties or guarantees of any kind.</p>
+
+                <h4 class="mt-4">3. User Responsibilities and Acknowledgments</h4>
+                <ul>
+                    <li>You must comply with YouTube's Terms of Service and Community Guidelines</li>
+                    <li>You are solely responsible for all content posted through the application</li>
+                    <li>You acknowledge that the application acts on your behalf using your YouTube account credentials</li>
+                    <li>You are responsible for monitoring and managing the application's automated actions</li>
+                    <li>You accept all risks associated with using automated posting and moderation features</li>
+                    <li>You are responsible for any potential misuse or malfunction of the service</li>
+                    <li>You agree to indemnify and hold harmless YT Chat Pulse and its creators from any claims</li>
+                </ul>
+
+                <h4 class="mt-4">4. Disclaimer of Liability</h4>
+                <p>YT Chat Pulse and its creators explicitly disclaim all liability for:</p>
+                <ul>
+                    <li>Any harmful, inappropriate, or unwanted comments posted by the application</li>
+                    <li>Any violations of YouTube's terms of service or community guidelines</li>
+                    <li>Any damage to your YouTube channel, reputation, or business</li>
+                    <li>Any technical malfunctions or errors in the service</li>
+                    <li>Any unauthorized access to your YouTube account</li>
+                    <li>Any consequences of service interruptions or modifications</li>
+                    <li>Any direct, indirect, incidental, or consequential damages</li>
+                </ul>
+
+                <h4 class="mt-4">5. Service Limitations</h4>
+                <ul>
+                    <li>The service is provided "as is" without any warranties</li>
+                    <li>We reserve the right to modify or discontinue the service at any time</li>
+                    <li>We are not responsible for any damages resulting from service interruptions</li>
+                    <li>We make no guarantees about the reliability or effectiveness of the service</li>
+                </ul>
+
+                <h4 class="mt-4">6. Indemnification</h4>
+                <p>You agree to indemnify, defend, and hold harmless YT Chat Pulse, its creators, employees, and affiliates from and against any claims, liabilities, damages, losses, and expenses, including legal fees, arising out of or in any way connected with your use of the service.</p>
+
+                <h4 class="mt-4">7. Changes to Terms</h4>
+                <p>We reserve the right to modify these terms at any time. Continued use of the service constitutes acceptance of new terms.</p>
+
+                <h4 class="mt-4">8. Contact</h4>
+                <p>For any questions regarding these terms, please contact us at <span class="blockspam" aria-hidden="true">PLEASE GO AWAY!</span> ytcp@<!-- zdfjzdhfkjypcz -->bishan.me.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 YT Chat Pulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
