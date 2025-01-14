@@ -501,6 +501,12 @@
                         } else {
                             alert('Failed to authenticate. Please try again.');
                         }
+                    }).then(data => {
+                        if (data.authUrl) {
+                            window.location.href = data.authUrl;
+                        } else {
+                            alert('An error occurred: ' + data.error);
+                        }
                     })
                     .catch(error => {
                         alert('An error occurred: ' + error.message);
