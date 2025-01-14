@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YT Chat Pulse - YouTube Live Stream Moderator</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-	<link rel="manifest" href="assets/site.webmanifest">	
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
             --primary-blue: #0066cc;
             --primary-green: #28a745;
         }
+
         .navbar-custom {
             background-color: var(--primary-blue);
         }
+
         .btn-custom {
             background-color: var(--primary-green);
             border-color: var(--primary-green);
             color: white;
         }
+
         .btn-custom:hover {
             background-color: #218838;
             border-color: #218838;
             color: white;
         }
+
         .hero {
             background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
             color: white;
             padding: 4rem 0;
         }
+
         .feature-icon {
             font-size: 2.5rem;
             color: var(--primary-blue);
         }
+
         .disclaimer-alert {
             background-color: #fff3cd;
             border: 1px solid #ffeeba;
@@ -43,11 +50,13 @@
             margin: 1rem 0;
             border-radius: 0.25rem;
         }
-		span.blockspam {
-		  display: none;
-		}		
+
+        span.blockspam {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation remains the same -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
@@ -61,6 +70,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#user-guide">User Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQs</a>
                     <li class="nav-item">
                         <a class="nav-link" href="#privacy">Privacy Policy</a>
                     </li>
@@ -77,7 +91,7 @@
         <!-- Hero Section -->
         <div class="hero">
             <div class="container text-center">
-				<img src="assets/logo.png" alt="Chat Pulse Logo" class="logo-img">
+                <img src="assets/logo.png" alt="Chat Pulse Logo" class="logo-img">
                 <h1 class="display-4">Enhance Your YouTube Live Streams</h1>
                 <p class="lead">Automated moderation and engagement tools for YouTube live streamers</p>
                 <button class="btn btn-light btn-lg mt-3">Get Started</button>
@@ -86,7 +100,9 @@
 
         <div class="container mt-4">
             <div class="disclaimer-alert">
-                <strong>Important Notice:</strong> By using YT Chat Pulse, you acknowledge and accept full responsibility for all actions performed by the application on your behalf, including any automated comments or moderation actions.
+                <strong>Important Notice:</strong> By using YT Chat Pulse, you acknowledge and accept full
+                responsibility for all actions performed by the application on your behalf, including any automated
+                comments or moderation actions.
             </div>
         </div>
 
@@ -118,15 +134,156 @@
         </div>
     </section>
 
+    <!-- User Guide for YT Chat Pulse -->
+    <section id="user-guide" class="container my-5">
+        <h2>User Guide for YT Chat Pulse</h2>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mt-4">Introduction to YT Chat Pulse</h4>
+                <p>Welcome to YT Chat Pulse, your ultimate assistant for YouTube live streams! This app is designed to:
+                </p>
+                <ul>
+                    <li>Post engaging facts about your channel during live streams.</li>
+                    <li>Greet new commenters to make your audience feel welcome.</li>
+                    <li>Automate your live chat interactions effortlessly.</li>
+                </ul>
+
+                <h4 class="mt-4">Your Data, Secured</h4>
+                <p>YT Chat Pulse securely stores:</p>
+                <ul>
+                    <li>YouTube Channel ID, Channel Name, and Description.</li>
+                    <li>Google Spreadsheet ID.</li>
+                    <li>OAuth tokens (encrypted for maximum validity and refreshed automatically).</li>
+                </ul>
+                <p>The app <b>does not store passwords or sensitive personal information</b>.</p>
+
+                <h4 class="mt-4">Getting Started</h4>
+                <h5 class="mt-4">Step 1: Launch the App</h5>
+                <p>Click the <b>Get Started</b> button. A popup window will appear prompting you to:</p>
+                <ul>
+                    <li>Provide your YouTube Channel ID.</li>
+                    <li>Enter your Google Spreadsheet ID (with channel facts to publish during the live stream).</li>
+                </ul>
+
+                <h5 class="mt-4">Finding Your YouTube Channel ID</h5>
+                <ul>
+                    <li>Go to your YouTube channel.</li>
+                    <li>Click on your profile picture and select YouTube Studio.</li>
+                    <li>Copy the URL. The Channel ID is the string after <code>/channel/</code>.</li>
+                </ul>
+                <p>Example: <code>https://studio.youtube.com/channel/UC1234567890ABCDEF</code></p>
+                <ul>
+                    <li><b>Channel ID:</b> <code>UC1234567890ABCDEF</code></li>
+                </ul>
+
+                <h5 class="mt-4">Finding Your Spreadsheet ID</h5>
+                <ul>
+                    <li>Open the Google Spreadsheet.</li>
+                    <li>Check the URL. The ID is the string between <code>/d/</code> and <code>/edit</code>.</li>
+                </ul>
+                <p>Example: <code>https://docs.google.com/spreadsheets/d/1AbCDEFGHIJKLMN12345678/edit</code></p>
+                <ul>
+                    <li><b>Spreadsheet ID:</b> <code>1AbCDEFGHIJKLMN12345678</code></li>
+                </ul>
+
+                <h5 class="mt-4">Formatting the Spreadsheet</h5>
+                <p>Ensure your Google Spreadsheet is formatted as follows:</p>
+                <ul>
+                    <li><b>Column A:</b> Channel ID.</li>
+                    <li><b>Column B:</b> Content (facts to post).</li>
+                    <li><b>Column C:</b> Priority (higher priority facts are posted first).</li>
+                    <li><b>Column D:</b> Active (set to <code>Yes</code> to enable the fact).</li>
+                </ul>
+
+                <h4 class="mt-4">Using the App</h4>
+                <h5 class="mt-4">Step 2: Authenticate</h5>
+                <ul>
+                    <li>Click the <b>Submit and Authenticate</b> button in the popup.</li>
+                    <li>Log in using your Google account. The app will display a consent screen explaining the required
+                        permissions.</li>
+                    <li>Once authenticated, your Channel ID and Spreadsheet ID are securely stored.</li>
+                </ul>
+
+                <h5 class="mt-4">Step 3: Start Live Streaming</h5>
+                <p>Once you go live on YouTube:</p>
+                <ul>
+                    <li>The app will automatically detect the live stream.</li>
+                    <li>It will post a <b>"Hello!"</b> message as the first comment.</li>
+                    <li>Every 5 minutes, the app will post a fact from the spreadsheet (based on priority).</li>
+                    <li>The app monitors live comments every minute and greets new users with <b>"Welcome
+                            @username!"</b>.</li>
+                </ul>
+
+                <h4 class="mt-4">Features</h4>
+                <h5 class="mt-4">1. Automated Messages</h5>
+                <ul>
+                    <li>Post facts about your channel at regular intervals.</li>
+                    <li>Engage your audience with interesting content during live streams.</li>
+                </ul>
+                <h5 class="mt-4">2. Comment Monitoring and User Greetings</h5>
+                <ul>
+                    <li>Detect new commenters and greet them personally.</li>
+                </ul>
+                <h5 class="mt-4">3. Flexible Spreadsheet Integration</h5>
+                <ul>
+                    <li>Manage your facts directly through Google Sheets.</li>
+                </ul>
+
+                <h4 class="mt-4">Error Handling</h4>
+                <h5 class="mt-4">Common Issues and Solutions</h5>
+                <h6 class="mt-4">1. Authentication Failure:</h6>
+                <ul>
+                    <li>Ensure you’re logged into the correct Google account.</li>
+                    <li>Check if permissions are granted during the consent screen.</li>
+                </ul>
+                <h6 class="mt-4">2. YouTube Quota Issues:</h6>
+                <ul>
+                    <li>If the app fails to post comments, it may have reached the YouTube API quota. Wait for quota
+                        reset or adjust usage.</li>
+                </ul>
+                <h6 class="mt-4">3. Spreadsheet Errors:</h6>
+                <ul>
+                    <li>Verify that the spreadsheet ID is correct.</li>
+                    <li>Ensure the spreadsheet follows the required format.</li>
+                </ul>
+                <h6 class="mt-4">4. Live Stream Detection Issues:</h6>
+                <ul>
+                    <li>Confirm that the app has permissions to manage your YouTube live streams.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs and Support -->
+    <section id="faq" class="container my-5">
+        <h2>FAQs and Support</h2>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mt-4">Q: Can I use the app for multiple channels?</h4>
+                <p>A: Yes, you can add multiple channels by authenticating each one separately.</p>
+
+                <h4 class="mt-4">Q: How can I update my spreadsheet?</h4>
+                <p>A: Open the spreadsheet linked to the app, make changes, and save. The app will automatically use the
+                    updated data.</p>
+
+                <h4 class="mt-4">Need Help?</h4>
+                <p>Contact our support team at <span class="blockspam" aria-hidden="true">PLEASE GO AWAY!</span>
+                    ytcp@<!-- zdfjzdhfkjypcz -->bishan.me.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Privacy Policy with enhanced disclaimers -->
     <section id="privacy" class="container my-5">
         <h2>Privacy Policy</h2>
         <div class="card">
             <div class="card-body">
                 <h5>Last updated: January 14, 2025</h5>
-                
+
                 <div class="disclaimer-alert">
-                    <strong>Disclaimer:</strong> YT Chat Pulse is provided as-is without any warranties or guarantees. Users are solely responsible for all actions and consequences resulting from the use of this service.
+                    <strong>Disclaimer:</strong> YT Chat Pulse is provided as-is without any warranties or guarantees.
+                    Users are solely responsible for all actions and consequences resulting from the use of this
+                    service.
                 </div>
 
                 <h4 class="mt-4">1. Information We Collect</h4>
@@ -146,7 +303,8 @@
                 </ul>
 
                 <h4 class="mt-4">3. Data Storage</h4>
-                <p>We store only essential data required for the application to function. OAuth tokens are stored securely and only for their valid duration.</p>
+                <p>We store only essential data required for the application to function. OAuth tokens are stored
+                    securely and only for their valid duration.</p>
 
                 <h4 class="mt-4">4. Third-Party Services</h4>
                 <p>We integrate with the following third-party services:</p>
@@ -165,7 +323,8 @@
                 </ul>
 
                 <h4 class="mt-4">6. Contact</h4>
-                <p>For any privacy-related questions or concerns, please contact us at <span class="blockspam" aria-hidden="true">PLEASE GO AWAY!</span> ytcp@<!-- zdfjzdhfkjypcz -->bishan.me.</p>
+                <p>For any privacy-related questions or concerns, please contact us at <span class="blockspam"
+                        aria-hidden="true">PLEASE GO AWAY!</span> ytcp@<!-- zdfjzdhfkjypcz -->bishan.me.</p>
             </div>
         </div>
     </section>
@@ -178,20 +337,26 @@
                 <h5>Last updated: January 14, 2025</h5>
 
                 <div class="disclaimer-alert">
-                    <strong>Important Legal Notice:</strong> By using YT Chat Pulse, you explicitly agree that you are solely responsible for all actions performed by the application, including but not limited to automated comments, welcome messages, and any other interactions with YouTube's platform.
+                    <strong>Important Legal Notice:</strong> By using YT Chat Pulse, you explicitly agree that you are
+                    solely responsible for all actions performed by the application, including but not limited to
+                    automated comments, welcome messages, and any other interactions with YouTube's platform.
                 </div>
 
                 <h4 class="mt-4">1. Acceptance of Terms</h4>
-                <p>By accessing and using YT Chat Pulse, you agree to be bound by these Terms of Service and accept full responsibility for all consequences of using the service.</p>
+                <p>By accessing and using YT Chat Pulse, you agree to be bound by these Terms of Service and accept full
+                    responsibility for all consequences of using the service.</p>
 
                 <h4 class="mt-4">2. Service Description</h4>
-                <p>YT Chat Pulse is a free service that provides automated moderation and commenting features for YouTube live streams. The service is provided "as is" without any warranties or guarantees of any kind.</p>
+                <p>YT Chat Pulse is a free service that provides automated moderation and commenting features for
+                    YouTube live streams. The service is provided "as is" without any warranties or guarantees of any
+                    kind.</p>
 
                 <h4 class="mt-4">3. User Responsibilities and Acknowledgments</h4>
                 <ul>
                     <li>You must comply with YouTube's Terms of Service and Community Guidelines</li>
                     <li>You are solely responsible for all content posted through the application</li>
-                    <li>You acknowledge that the application acts on your behalf using your YouTube account credentials</li>
+                    <li>You acknowledge that the application acts on your behalf using your YouTube account credentials
+                    </li>
                     <li>You are responsible for monitoring and managing the application's automated actions</li>
                     <li>You accept all risks associated with using automated posting and moderation features</li>
                     <li>You are responsible for any potential misuse or malfunction of the service</li>
@@ -219,13 +384,17 @@
                 </ul>
 
                 <h4 class="mt-4">6. Indemnification</h4>
-                <p>You agree to indemnify, defend, and hold harmless YT Chat Pulse, its creators, employees, and affiliates from and against any claims, liabilities, damages, losses, and expenses, including legal fees, arising out of or in any way connected with your use of the service.</p>
+                <p>You agree to indemnify, defend, and hold harmless YT Chat Pulse, its creators, employees, and
+                    affiliates from and against any claims, liabilities, damages, losses, and expenses, including legal
+                    fees, arising out of or in any way connected with your use of the service.</p>
 
                 <h4 class="mt-4">7. Changes to Terms</h4>
-                <p>We reserve the right to modify these terms at any time. Continued use of the service constitutes acceptance of new terms.</p>
+                <p>We reserve the right to modify these terms at any time. Continued use of the service constitutes
+                    acceptance of new terms.</p>
 
                 <h4 class="mt-4">8. Contact</h4>
-                <p>For any questions regarding these terms, please contact us at <span class="blockspam" aria-hidden="true">PLEASE GO AWAY!</span> ytcp@<!-- zdfjzdhfkjypcz -->bishan.me.</p>
+                <p>For any questions regarding these terms, please contact us at <span class="blockspam"
+                        aria-hidden="true">PLEASE GO AWAY!</span> ytcp@<!-- zdfjzdhfkjypcz -->bishan.me.</p>
             </div>
         </div>
     </section>
@@ -239,4 +408,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
