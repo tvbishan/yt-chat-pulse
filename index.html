@@ -493,24 +493,15 @@
                         spreadsheetId: spreadsheetId
                     }),
                     redirect: "follow"
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            alert('Successfully submitted and authenticated!');
-                            document.getElementById('channelForm').reset();
-                        } else {
-                            alert('Failed to authenticate. Please try again.');
-                        }
-                    }).then(data => {
-                        if (data.authUrl) {
-                            window.location.href = data.authUrl;
-                        } else {
-                            alert('An error occurred: ' + data.error);
-                        }
-                    })
-                    .catch(error => {
-                        alert('An error occurred: ' + error.message);
-                    });
+                }).then(response => response.json()).then(data => {
+                    if (data.authUrl) {
+                        window.location.href = data.authUrl;
+                    } else {
+                        alert('An error occurred: ' + data.error);
+                    }
+                }).catch(error => {
+                    alert('An error occurred: ' + error.message);
+                });
             } else {
                 alert('Please fill in all fields.');
             }
