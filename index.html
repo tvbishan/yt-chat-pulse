@@ -86,7 +86,7 @@
         </div>
     </nav>
 
-    <div id="notification" class="alert" role="alert" style="display: none;"></div>
+    <div id="liveAlertPlaceholder"></div>
 
     <!-- Home Section with added disclaimer -->
     <section id="home">
@@ -438,8 +438,6 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
         function getQueryParams() {
@@ -455,16 +453,24 @@
 
         function showNotification() {
             const params = getQueryParams();
-            const notification = document.getElementById('notification');
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+
+            const appendAlert = (message, type) => {
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = [
+                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                    `   <div>${message}</div>`,
+                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                    '</div>'
+                ].join('');
+
+                alertPlaceholder.append(wrapper);
+            }
 
             if (params.status === 'success') {
-                notification.textContent = 'Authentication successful!';
-                notification.className = 'alert alert-success';
-                notification.style.display = 'block';
+                appendAlert('Authentication successful!', 'success');
             } else if (params.status === 'error') {
-                notification.textContent = 'Authentication failed. Please try again.';
-                notification.className = 'alert alert-danger';
-                notification.style.display = 'block';
+                appendAlert('Authentication failed. Please try again.', 'danger');
             }
         }
 
@@ -477,7 +483,7 @@
             const spreadsheetId = document.getElementById('spreadsheetId').value;
 
             if (channelId && spreadsheetId) {
-                fetch('https://pubsubhubbub.bishan.me/authPost', {
+                fetch('https://pubsubhubbub.bishan.me/onboard', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
