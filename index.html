@@ -491,7 +491,8 @@
                     body: JSON.stringify({
                         channelId: channelId,
                         spreadsheetId: spreadsheetId
-                    })
+                    }),
+                    redirect: "follow"
                 })
                     .then(response => {
                         if (response.ok) {
